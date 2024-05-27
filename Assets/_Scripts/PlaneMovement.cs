@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlaneMovement : MonoBehaviour
 {
-    private float speed = 3f;
-    private float verticalSpeed = 10f;
-    private float yMin = -3f;
-    private float yMax = 3f;
+    [SerializeField] private float speed = 2.0f;
+    [SerializeField] private float verticalSpeed = 10f;
+    [SerializeField] private float yMin = -3f;
+    [SerializeField] private float yMax = 3f;
 
     private bool movingUp = true;
 
@@ -30,6 +30,12 @@ public class PlaneMovement : MonoBehaviour
             {
                 movingUp = true;
             }
+        }
+
+        if (transform.position.x < -13)
+        {
+            Destroy(gameObject);
+            Debug.Log("gameOver");
         }
     }
 }

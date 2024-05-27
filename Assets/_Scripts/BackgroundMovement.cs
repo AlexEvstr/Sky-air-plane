@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BackgroundMovement : MonoBehaviour
 {
-    private float movementSpeed = 2.5f;
+    private float movementSpeed = 2.0f;
     private Vector2 _startPosition;
     private float _backgroundCenter;
 

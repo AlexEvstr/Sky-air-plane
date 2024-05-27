@@ -9,6 +9,7 @@ public class BulletCollisionDetector : MonoBehaviour
         if (collision.gameObject.CompareTag("Plane"))
         {
             Destroy(gameObject);
+            PlaneHP.CurrentHp -= 0.1f;
         }
 
     }
