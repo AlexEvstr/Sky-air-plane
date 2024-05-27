@@ -487,6 +487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1182226548}
   - component: {fileID: 1182226549}
+  - component: {fileID: 1182226550}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -524,6 +525,23 @@ MonoBehaviour:
   rocketPrefab: {fileID: 4164543166511307742, guid: 95a65b2d8f6e64d6c82b212ead0384c5, type: 3}
   crosshairPrefab: {fileID: 71109899037323578, guid: ec92ae95a91e5412bb0734434eb87190, type: 3}
   crosshairLifetime: 0.5
+--- !u!114 &1182226550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182226547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1baa9b842899d4020b96bf9f0a03efd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _planes:
+  - {fileID: 6227418132423249060, guid: 295ac63055edf46d0b2edf950132c921, type: 3}
+  - {fileID: 1133466087476423118, guid: 2f5f5be94ee3c491cba6c15f0fe5bf9b, type: 3}
+  - {fileID: 6885416319487633269, guid: 86e29203067b14de88f8c54455555d1d, type: 3}
+  - {fileID: 4671647734997598952, guid: 31539239798d74c49a849b9145840039, type: 3}
 --- !u!1 &1390567075
 GameObject:
   m_ObjectHideFlags: 0
