@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 8726347588114650698}
   _maximumHP: 1
+  _parts: {fileID: 3490863851965464629, guid: a80ac919452ef44848317cf248ad6fef, type: 3}
 --- !u!1 &7132765584037864194
 GameObject:
   m_ObjectHideFlags: 0

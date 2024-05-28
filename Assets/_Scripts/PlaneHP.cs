@@ -7,11 +7,11 @@ public class PlaneHP : MonoBehaviour
 {
     [SerializeField] private Image _hpBar;
     [SerializeField] private float _maximumHP;
+    [SerializeField] private GameObject _parts;
     public static float CurrentHp;
 
     private void Start()
     {
-        //_maximumHP = 1.0f;
         CurrentHp = _maximumHP;
     }
 
@@ -21,6 +21,8 @@ public class PlaneHP : MonoBehaviour
 
         if (CurrentHp <= 0)
         {
+            GameObject parts = Instantiate(_parts);
+            parts.transform.position = gameObject.transform.position;
             Destroy(gameObject);
             PlaneSpawner.CanSpawnPlane = true;
         }
