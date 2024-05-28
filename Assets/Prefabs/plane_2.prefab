@@ -466,4 +466,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 5427216702413220826}
   _maximumHP: 2
-  _parts: {fileID: 3490863851965464629, guid: a80ac919452ef44848317cf248ad6fef, type: 3}
+  _parts: {fileID: 119097570233875046, guid: 5c97d782638d34b58a3be75065cf7019, type: 3}

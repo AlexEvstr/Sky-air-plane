@@ -15,8 +15,7 @@ public class PlaneSpawner : MonoBehaviour
     public void SpawnRandomPlane()
     {
         int randomPlane = Random.Range(0, _planes.Length);
-        //GameObject newPlane = Instantiate(_planes[randomPlane]);
-        GameObject newPlane = Instantiate(_planes[0]);
+        GameObject newPlane = Instantiate(_planes[randomPlane]);
         newPlane.transform.position = new Vector2(15, 0);
         CanSpawnPlane = false;
     }
