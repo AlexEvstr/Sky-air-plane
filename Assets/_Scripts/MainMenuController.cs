@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] private GameObject _levelsPanel;
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void Playbtn()
     {
-        SceneManager.LoadScene("GameplayScene");
+        _levelsPanel.SetActive(true);
     }
 }

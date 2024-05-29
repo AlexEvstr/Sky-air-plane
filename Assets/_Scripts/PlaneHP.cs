@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +22,12 @@ public class PlaneHP : MonoBehaviour
             GameObject parts = Instantiate(_parts);
             parts.transform.position = gameObject.transform.position;
             Destroy(gameObject);
-            PlaneSpawner.CanSpawnPlane = true;
+            PlanesCounter.DestroyedPlanes++;
+            if (PlanesCounter.DestroyedPlanes == GameManager.CurrentLevel)
+            {
+                PlaneSpawner.CanSpawnPlane = false;
+            }
+            else PlaneSpawner.CanSpawnPlane = true;
         }
     }
 }

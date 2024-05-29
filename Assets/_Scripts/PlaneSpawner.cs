@@ -9,10 +9,11 @@ public class PlaneSpawner : MonoBehaviour
 
     private void Start()
     {
+        CanSpawnPlane = true;
         SpawnRandomPlane();
     }
 
-    public void SpawnRandomPlane()
+    private void SpawnRandomPlane()
     {
         int randomPlane = Random.Range(0, _planes.Length);
         GameObject newPlane = Instantiate(_planes[randomPlane]);
