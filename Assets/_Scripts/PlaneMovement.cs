@@ -31,11 +31,5 @@ public class PlaneMovement : MonoBehaviour
                 movingUp = true;
             }
         }
-
-        if (transform.position.x < -13)
-        {
-            Destroy(gameObject);
-            Debug.Log("gameOver");
-        }
     }
 }
