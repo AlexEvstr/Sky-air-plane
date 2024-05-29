@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RocketSpawner : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class RocketSpawner : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (IsPointerOverUIElement())
+            {
+                return;
+            }
             Vector3 tapPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             tapPosition.z = 0;
             SpawnRocket(tapPosition);
@@ -18,10 +24,27 @@ public class RocketSpawner : MonoBehaviour
         }
     }
 
+    private bool IsPointerOverUIElement()
+    {
+        // Check if the pointer is over a UI element
+        PointerEventData eventData = new PointerEventData(EventSystem.current);
+        eventData.position = Input.mousePosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+
+        return results.Count > 0;
+    }
+
     void SpawnRocket(Vector3 targetPosition)
     {
         Vector3 spawnPosition = new Vector3(0, -4, 0);
         GameObject rocket = Instantiate(rocketPrefab, spawnPosition, Quaternion.identity);
+
+        int bullets = PlayerPrefs.GetInt(rocket.GetComponent<SpriteRenderer>().sprite.name, 0);
+        bullets--;
+        PlayerPrefs.SetInt(rocket.GetComponent<SpriteRenderer>().sprite.name, bullets);
+
         Vector3 direction = targetPosition - spawnPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rocket.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
