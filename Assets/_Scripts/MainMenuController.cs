@@ -5,6 +5,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject _levelsPanel;
     [SerializeField] private GameObject _privacyWindow;
+    [SerializeField] private GameObject _tutorialWindow;
     [SerializeField] private TMP_Text _coinsText;
 
     public static int CoinsCount;
@@ -29,6 +30,16 @@ public class MainMenuController : MonoBehaviour
     public void ClosePrivacy()
     {
         _privacyWindow.SetActive(false);
+    }
+
+    public void OpenTutorial()
+    {
+        _tutorialWindow.SetActive(true);
+    }
+
+    public void CloseTutorial()
+    {
+        _tutorialWindow.SetActive(false);
     }
 
     private void Update()
