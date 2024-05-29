@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject _levelsPanel;
+    [SerializeField] private GameObject _privacyWindow;
     [SerializeField] private TMP_Text _coinsText;
 
     public static int CoinsCount;
@@ -21,6 +22,16 @@ public class MainMenuController : MonoBehaviour
     public void Playbtn()
     {
         _levelsPanel.SetActive(true);
+    }
+
+    public void OpenPrivacy()
+    {
+        _privacyWindow.SetActive(true);
+    }
+
+    public void ClosePrivacy()
+    {
+        _privacyWindow.SetActive(false);
     }
 
     private void Update()
