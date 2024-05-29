@@ -16,6 +16,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         if (PlayerPrefs.GetString("EnterIsNotFirst", "") == "")
         {
             _onboard_1.SetActive(true);

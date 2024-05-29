@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         CurrentLevel = PlayerPrefs.GetInt("Level", 1);
         _levelCompleteText.text = $"LEVEL {CurrentLevel} COMPLETE!";
     }
