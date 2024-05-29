@@ -5,7 +5,8 @@ public class ShieldShop : MonoBehaviour
 {
     [SerializeField] private TMP_Text _shieldCountText;
     [SerializeField] private int _shieldPrice;
-    [SerializeField] MenuAudio _menuAudio;
+    [SerializeField] private MenuAudio _menuAudio;
+    [SerializeField] private MenuVibro _menuVibro;
     private int _shieldCount;
 
     private void Start()
@@ -24,10 +25,12 @@ public class ShieldShop : MonoBehaviour
             _shieldCountText.text = _shieldCount.ToString();
             PlayerPrefs.SetInt("Coins", MainMenuController.CoinsCount);
             _menuAudio.PlauBuySound();
+            _menuVibro.StrongVibration();
         }
         else
         {
             _menuAudio.PlayClickSound();
+            _menuVibro.SmallVibration();
         }
     }
 }

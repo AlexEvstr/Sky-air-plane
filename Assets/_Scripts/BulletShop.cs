@@ -7,7 +7,8 @@ public class BulletShop : MonoBehaviour
 {
     [SerializeField] private TMP_Text _bulletCountText;
     [SerializeField] private int _price;
-    [SerializeField] MenuAudio _menuAudio;
+    [SerializeField] private MenuAudio _menuAudio;
+    [SerializeField] private MenuVibro _menuVibro;
     private int _bulletCount;
 
     private void Start()
@@ -26,10 +27,12 @@ public class BulletShop : MonoBehaviour
             _bulletCountText.text = _bulletCount.ToString();
             PlayerPrefs.SetInt("Coins", MainMenuController.CoinsCount);
             _menuAudio.PlauBuySound();
+            _menuVibro.StrongVibration();
         }
         else
         {
             _menuAudio.PlayClickSound();
+            _menuVibro.SmallVibration();
         }
     }
 }

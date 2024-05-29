@@ -233,6 +233,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &13722662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +724,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1733,6 +1757,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2780,6 +2816,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &939794678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2953,6 +3001,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3397,6 +3457,7 @@ GameObject:
   - component: {fileID: 1182226553}
   - component: {fileID: 1182226555}
   - component: {fileID: 1182226554}
+  - component: {fileID: 1182226556}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -3604,6 +3665,18 @@ MonoBehaviour:
   _completeSound: {fileID: 8300000, guid: 4dae57b91ccdc4e58b8be16ab0353943, type: 3}
   _gameOverSound: {fileID: 8300000, guid: faa760355ad2d452784288b682efede5, type: 3}
   _shootSound: {fileID: 8300000, guid: 5c75efe420a934b45ab252f0f1137253, type: 3}
+--- !u!114 &1182226556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182226547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3fa6f43c29b84b9a87c1cb15b53ae1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1245952163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3835,6 +3908,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4210,6 +4295,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1359485277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4325,6 +4422,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4553,6 +4662,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5002,6 +5123,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1647783095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5332,6 +5465,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1660421966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5602,6 +5747,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1680233980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5717,6 +5874,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: SmallVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6349,6 +6518,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1906945439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6646,6 +6827,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1182226555}
         m_TargetAssemblyTypeName: GameAudio, Assembly-CSharp
         m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1182226556}
+        m_TargetAssemblyTypeName: GameVibro, Assembly-CSharp
+        m_MethodName: StrongVibration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

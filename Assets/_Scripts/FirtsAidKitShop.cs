@@ -5,7 +5,8 @@ public class FirtsAidKitShop : MonoBehaviour
 {
     [SerializeField] private TMP_Text _firstKitCountText;
     [SerializeField] private int _kitPrice;
-    [SerializeField] MenuAudio _menuAudio;
+    [SerializeField] private MenuAudio _menuAudio;
+    [SerializeField] private MenuVibro _menuVibro;
     private int _kitCount;
 
     private void Start()
@@ -24,10 +25,12 @@ public class FirtsAidKitShop : MonoBehaviour
             _firstKitCountText.text = _kitCount.ToString();
             PlayerPrefs.SetInt("Coins", MainMenuController.CoinsCount);
             _menuAudio.PlauBuySound();
+            _menuVibro.StrongVibration();
         }
         else
         {
             _menuAudio.PlayClickSound();
+            _menuVibro.SmallVibration();
         }
     }
 }

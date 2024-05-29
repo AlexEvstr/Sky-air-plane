@@ -34,10 +34,12 @@ public class BulletCollisionDetector : MonoBehaviour
                 lastHit.transform.position = collision.transform.position;
                 Destroy(lastHit, 0.7f);
                 PlayLastHitSound();
+                if (GameVibro.CanVibro) Vibration.Vibrate();
             }
             else
             {
                 PlayNormalHitSound();
+                if (GameVibro.CanVibro) Vibration.VibratePop();
             }
 
             gameObject.GetComponent<SpriteRenderer>().enabled = false;

@@ -16,6 +16,7 @@ public class LoseBorder : MonoBehaviour
             if (!_shield.activeInHierarchy)
             {
                 _gameAudio.PlayGameOverSound();
+                if (GameVibro.CanVibro) Vibration.Vibrate();
                 _losePanel.SetActive(true);
                 int _kitCount = PlayerPrefs.GetInt("FirstAidKit", 0);
                 if (_kitCount > 0)

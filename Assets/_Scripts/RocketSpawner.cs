@@ -24,6 +24,7 @@ public class RocketSpawner : MonoBehaviour
                 return;
             }
             _gameAudio.PlayShootSound();
+            if (GameVibro.CanVibro) Vibration.VibratePop();
             Vector3 tapPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             tapPosition.z = 0;
             SpawnRocket(tapPosition);
