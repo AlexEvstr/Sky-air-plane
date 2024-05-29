@@ -26,6 +26,10 @@ public class BulletGameButton : MonoBehaviour
     private void Update()
     {
         _bulletCount = PlayerPrefs.GetInt(gameObject.name, 0);
+        if (gameObject.name == "bullet_0")
+        {
+            _bulletCount = 999;
+        }
 
         if (_bulletCount <= 0)
         {
