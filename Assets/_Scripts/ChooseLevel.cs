@@ -28,6 +28,7 @@ public class ChooseLevel : MonoBehaviour
         {
             button.enabled = true;
             image.color = new Color(1f, 1f, 1f);
+            transform.GetChild(1).gameObject.SetActive(false);
         }
     }
 
