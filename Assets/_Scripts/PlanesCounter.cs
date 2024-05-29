@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlanesCounter : MonoBehaviour
 {
     [SerializeField] private GameObject _completePanel;
+    private GameAudio _gameAudio;
     public static int DestroyedPlanes;
 
     private void Start()
     {
+        _gameAudio = GetComponent<GameAudio>();
         DestroyedPlanes = 0;
     }
 
@@ -17,6 +19,7 @@ public class PlanesCounter : MonoBehaviour
         if (DestroyedPlanes == GameManager.CurrentLevel)
         {
             _completePanel.SetActive(true);
+            _gameAudio.PlayCompleteSound();
 
             int coins = PlayerPrefs.GetInt("Coins", 0);
             coins += GameManager.CurrentLevel * 100;

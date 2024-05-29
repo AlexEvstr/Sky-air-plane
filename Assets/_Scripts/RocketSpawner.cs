@@ -8,6 +8,12 @@ public class RocketSpawner : MonoBehaviour
     public GameObject rocketPrefab;
     public GameObject crosshairPrefab;
     public float crosshairLifetime = 0.5f;
+    private GameAudio _gameAudio;
+
+    private void Start()
+    {
+        _gameAudio = GetComponent<GameAudio>();
+    }
 
     void Update()
     {
@@ -17,6 +23,7 @@ public class RocketSpawner : MonoBehaviour
             {
                 return;
             }
+            _gameAudio.PlayShootSound();
             Vector3 tapPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             tapPosition.z = 0;
             SpawnRocket(tapPosition);

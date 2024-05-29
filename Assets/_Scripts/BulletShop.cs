@@ -7,6 +7,7 @@ public class BulletShop : MonoBehaviour
 {
     [SerializeField] private TMP_Text _bulletCountText;
     [SerializeField] private int _price;
+    [SerializeField] MenuAudio _menuAudio;
     private int _bulletCount;
 
     private void Start()
@@ -24,6 +25,11 @@ public class BulletShop : MonoBehaviour
             PlayerPrefs.SetInt(gameObject.name, _bulletCount);
             _bulletCountText.text = _bulletCount.ToString();
             PlayerPrefs.SetInt("Coins", MainMenuController.CoinsCount);
-        }    
+            _menuAudio.PlauBuySound();
+        }
+        else
+        {
+            _menuAudio.PlayClickSound();
+        }
     }
 }

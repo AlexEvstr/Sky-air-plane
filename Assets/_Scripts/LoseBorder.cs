@@ -7,6 +7,7 @@ public class LoseBorder : MonoBehaviour
     [SerializeField] private Button _firstKitBtn;
     [SerializeField] private GameObject _useBonus;
     [SerializeField] private GameObject _shield;
+    [SerializeField] private GameAudio _gameAudio;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,6 +15,7 @@ public class LoseBorder : MonoBehaviour
         {
             if (!_shield.activeInHierarchy)
             {
+                _gameAudio.PlayGameOverSound();
                 _losePanel.SetActive(true);
                 int _kitCount = PlayerPrefs.GetInt("FirstAidKit", 0);
                 if (_kitCount > 0)

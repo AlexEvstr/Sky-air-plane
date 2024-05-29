@@ -6,11 +6,15 @@ public class BulletCollisionDetector : MonoBehaviour
 {
     [SerializeField] private GameObject _normalHit;
     [SerializeField] private GameObject _lastHit;
+    [SerializeField] private AudioClip _lastHitSound;
+    [SerializeField] private AudioClip _normalHitSound;
+    private AudioSource _audioSource;
 
     private float _hitPower;
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _hitPower = PlayerPrefs.GetFloat("HitPower", 0.1f);
     }
 
@@ -29,10 +33,26 @@ public class BulletCollisionDetector : MonoBehaviour
                 GameObject lastHit = Instantiate(_lastHit);
                 lastHit.transform.position = collision.transform.position;
                 Destroy(lastHit, 0.7f);
+                PlayLastHitSound();
+            }
+            else
+            {
+                PlayNormalHitSound();
             }
 
-            Destroy(gameObject);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<TrailRenderer>().enabled = false;
+            Destroy(gameObject, 2);
         }
+    }
 
+    private void PlayLastHitSound()
+    {
+        _audioSource.PlayOneShot(_lastHitSound);
+    }
+
+    private void PlayNormalHitSound()
+    {
+        _audioSource.PlayOneShot(_normalHitSound);
     }
 }
