@@ -22,6 +22,11 @@ public class MainMenuController : MonoBehaviour
         _levelsPanel.SetActive(true);
     }
 
+    public void CloseLevels()
+    {
+        _levelsPanel.SetActive(false);
+    }
+
     public void OpenPrivacy()
     {
         _privacyWindow.SetActive(true);

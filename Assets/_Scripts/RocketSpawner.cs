@@ -10,6 +10,8 @@ public class RocketSpawner : MonoBehaviour
     public float crosshairLifetime = 0.5f;
     private GameAudio _gameAudio;
 
+    [SerializeField] private GameObject _tutorial;
+
     private void Start()
     {
         _gameAudio = GetComponent<GameAudio>();
@@ -23,6 +25,7 @@ public class RocketSpawner : MonoBehaviour
             {
                 return;
             }
+            Destroy(_tutorial);
             _gameAudio.PlayShootSound();
             if (GameVibro.CanVibro) Vibration.VibratePop();
             Vector3 tapPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
